@@ -1,0 +1,201 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+.container
+{
+    width: 650px;
+    height: 530px;
+   background-color: #fff;
+   border-radius: 5px;
+   box-shadow: 0 0 2px #fff,
+                         0 0 10px #fff;
+}
+.bourd
+{
+    position: relative;
+    left: 50%;
+}
+.title
+{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.price
+{
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+    padding: 20px 0;
+}
+.type
+{
+    width: 200px;
+    display: flex;
+    padding: 15px 0;
+    flex-wrap: wrap;
+}
+.type span
+{
+   color: grey;
+   font-size: 20px;
+}
+.green, .red, .yellow
+{
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    margin: 0 2px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+.green img, .red img, .yellow img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.benefits
+{
+    padding: 20px 0;
+}
+.benefits span
+{
+    color: grey;
+    font-size: 20px;
+}
+ul li
+{
+    font-weight: bold;
+    padding: 4px 0;
+}
+button
+{
+    padding: 15px 25px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+}
+.box
+{
+    position: fixed;
+    left: 26%;
+    width: 340px;
+    background-color: rgb(18, 237, 18);
+    border-radius: 5px;
+    box-shadow: 0 0 2px #fff,
+                          0 0 10px #fff;
+    transition: 0.5s;          
+    opacity: 1;            
+    pointer-events: none;
+    overflow: hidden;
+}
+.box::after
+{
+    content: "";
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 800px;
+    height: 150px;
+    z-index: -1;
+    transform: rotate(45deg);
+    animation: altermate1 4s infinite linear;
+    background-image: linear-gradient(49deg, #fcfbfc96, #d7d2d338,#ffffffcc);
+}
+@keyframes altermate1
+{
+    0%
+    {
+        top: -20%;
+    }
+    100%
+    {
+        top: 100%;
+        left: -80%;
+    }
+}
+.box::before
+{
+    content: "";
+    position: absolute;
+    left: -50%;
+    z-index: 1;
+    top: 100%;
+    width: 800px;
+    height: 150px;
+    transform: rotate(45deg);
+    animation: altermate2 4s infinite linear;
+    background-image: linear-gradient(49deg, #fcfbfc96, #d7d2d338,#ffffffcc);
+}
+@keyframes altermate2
+{
+    0%
+    {
+        top: 100%;
+        left: -60%;
+    }
+    100%
+    {
+        top: -20%;
+    }
+}
+.show
+{
+    opacity: 1;
+    pointer-events: auto;
+}
+.box .icon
+{
+    color: #fff;
+   margin-top: 5%;
+   font-weight: bold;
+  font-size: 20px;
+}
+#green1
+{
+    background-color:rgb(18, 237, 18);
+    transition: 0.5s;
+}
+#red1
+{
+    background-color: rgb(236, 12, 12);
+    transition: 0.5s;
+}
+#yellow1
+{
+    background-color: rgb(228, 228, 18);
+    transition: 0.5s;
+}
+.share
+{
+   margin-left: 5%;
+}
+.heart
+{
+    cursor: pointer;
+    margin-left:265px ;
+}
+.photo
+{
+  margin-left: -60px;
+  filter: drop-shadow(5px 5px 8px rgb(0,0 ,0.2));
+  cursor: pointer;
+}
